@@ -28,26 +28,33 @@ Front-end and backend to allow users to search, select, or unselect properties f
 ## How to run
 
 **1. Compile from source(Python3.7)**
+
 Server:
-$ git clone https://github.com/lx881219/enodo-fullstack-challenge.git
+<pre><code>$ git clone https://github.com/lx881219/enodo-fullstack-challenge.git
 $ cd enodo-fullstack-challenge
 $ cd server
 $ python3.7 -m venv venv
 $ source venv/bin/activate
 (venv)$ pip install -r requirements.txt
 (venv)$ python app.py
+</code></pre>
 
 Client:
-$ cd client
+<pre><code>$ cd client
 $ npm install
 $ npm run serve
+</code></pre>
 
-visit http://localhost:8080/
+
+Visit http://localhost:8080/
 
 **2. Pull docker image from Docker Hub**
-$ docker login
+
+<pre><code>$ docker login
 ...
 $ docker run -d --name challenge -e "PORT=8765" -p 8007:8765 xiangli34/enodo-challenge
+</code></pre>
+
 
 Please give some time for docker to initiate the database and then visit http://localhost:8007/
 To dockerize, I removed all instances of http://localhost:5000 in client/src/components/Properties.vue
