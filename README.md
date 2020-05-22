@@ -44,11 +44,10 @@ $ npm run serve
 
 visit http://localhost:8080/
 
-**2. Pull docker image from Docker Hub **
+**2. Pull docker image from Docker Hub**
 $ docker login
 ...
-$ docker run -it xiangli34/enodo-challenge
-$ docker run -d --name challenge -e "PORT=8765" -p 8007:8765 enodo:latest
+$ docker run -d --name challenge -e "PORT=8765" -p 8007:8765 xiangli34/enodo-challenge
 
 Please give some time for docker to initiate the database and then visit http://localhost:8007/
 To dockerize, I removed all instances of http://localhost:5000 in client/src/components/Properties.vue
